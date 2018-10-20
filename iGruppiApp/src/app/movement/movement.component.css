@@ -1,0 +1,16 @@
+h2{
+    text-align: center;
+    padding: 1em;
+    font-weight: 600;
+    color: red;
+}
+
+.content-last{
+    margin-top: 40px;
+}
+
+.content-last .list-group .list-group-item{
+    padding: 20px;
+    margin-bottom: 0.5em;
+    border: 1px solid #000000;
+}
