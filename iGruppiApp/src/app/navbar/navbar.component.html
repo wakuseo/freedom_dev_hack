@@ -5,24 +5,18 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Ordina</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Gruppo
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Produttori</a>
-          <a class="dropdown-item" href="#">Clienti</a>
-        </div>
-      </li>
-    </ul>
-
     <div class="navbar-nav ml-auto">
-      <button type="button" class="btn btn-outline-success">Login</button>
-      <button type="button" class="btn btn-outline-secondary"> Registrati </button>
+      <div class="row">
+        <div class="col mx-auto">
+          <a href="#" routerLink="login">
+            <button type="button" class="btn btn-outline-success">Login</button>
+          </a>
+        </div>
+
+        <div class="col mx-auto">
+          <button type="button" class="btn btn-outline-primary">Registrati</button>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
