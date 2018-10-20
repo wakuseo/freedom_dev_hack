@@ -20,11 +20,24 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+<<<<<<< HEAD
     "@ng-bootstrap/ng-bootstrap": "^3.3.1",
+<<<<<<< HEAD
+=======
+=======
+    "@asymmetrik/ngx-leaflet": "4",
+    "@types/leaflet": "1.2",
+>>>>>>> feature/Raffaele-1
+    "angular-font-awesome": "^3.1.2",
+>>>>>>> 9e32bc2f0a2755eb09187b512402fefedcac0eae
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
+<<<<<<< HEAD
     "popper.js": "^1.14.4",
+=======
+    "leaflet": "1.3",
+>>>>>>> feature/Raffaele-1
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
