@@ -1,0 +1,12 @@
+h2{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em;
+}
+
+.element1{
+    width: 50%;
+    float: left;
+}
+.element2{width: 50%; float: left;}

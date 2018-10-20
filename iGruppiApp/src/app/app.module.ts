@@ -6,13 +6,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MovementComponent } from './movement/movement.component';
 import { ShopComponent } from './shop/shop.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MovementComponent,
-    ShopComponent
+    ShopComponent,
+    DashboardComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
