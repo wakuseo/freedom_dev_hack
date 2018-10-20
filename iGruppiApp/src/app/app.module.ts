@@ -6,6 +6,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MapComponent } from './map/map.component';
 import { LeafletModule } from 'node_modules/@asymmetrik/ngx-leaflet/dist';
 import { Routes, RouterModule } from 'node_modules/@angular/router';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -23,7 +25,9 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    MapComponent
+    MapComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
