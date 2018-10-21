@@ -8,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   constructor() { }
 
+  showForm = false;
+
   ngOnInit() {
+  }
+
+  showLogin() {
+    console.log('Click!!');
+    this.toggleLogin();
+  }
+
+  toggleLogin() {
+    this.showForm = !this.showForm;
   }
 }
