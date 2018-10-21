@@ -6,7 +6,24 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './map/map.component';
+import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'homepage',
+    pathMatch: 'full'
+  },
+  {
+    path: 'homepage',
+    component: HomeComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -15,10 +32,12 @@ import { MapComponent } from './map/map.component';
     FooterComponent,
     MapComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,4 +15,10 @@ export class LoginComponent implements OnInit {
   toggleLogin() {
     this.showLogin = !this.showLogin;
   }
+
+  login(email: string, password: string) {
+    if (email && password) {
+
+    }
+  }
 }
