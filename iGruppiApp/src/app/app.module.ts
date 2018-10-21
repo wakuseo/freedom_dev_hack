@@ -10,6 +10,17 @@ import { Routes, RouterModule } from 'node_modules/@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
