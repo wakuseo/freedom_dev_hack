@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {tap} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 interface TokenResponse {
   status: string;
@@ -12,27 +10,36 @@ interface TokenResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  static URL = 'http://localhost/api/login';
+  static URL = 'http://c1b1744d.ngrok.io/api/login';
   response: TokenResponse = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   callService(
     email: string,
-    password: string
-  ): Observable<Object> {
-    const obs: Observable<Object> = this.http.get(AuthService.URL + '?email=' + email + '&passwd=' + password);
-    obs.subscribe((data: TokenResponse) => this.saveToken(data));
-    return obs;
+    password: string,
+    callback
+  ) {
+    console.log('Request: ' + AuthService.URL + '?email=' + email + '&passwd=' + password);
+    this.http.get(AuthService.URL + '?email=' + email + '&passwd=' + password)
+      .subscribe((data: TokenResponse) => this.saveToken(data, callback));
   }
 
-  saveToken(token: TokenResponse) {
+  saveToken(token: TokenResponse, callback) {
     console.log('Valore del token: ' + JSON.stringify(token));
-    if (token != null) {
-      window.localStorage.setItem('AUTH_TOKEN', String(token.token));
-    } else {
-      window.localStorage.setItem('AUTH_TOKEN', null);
-    }
+    new Promise(function (resolve, reject) {
+      setTimeout(() => { }, 2000);
+      if (token != null) {
+        window.localStorage.setItem('AUTH_TOKEN', String(token.token));
+        resolve(token.token);
+      } else {
+        window.localStorage.setItem('AUTH_TOKEN', null);
+        setTimeout(() => { }, 2000);
+        resolve(null);
+      }
+      reject(null);
+    }).then(callback);
   }
 
 }

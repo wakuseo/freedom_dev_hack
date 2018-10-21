@@ -7,10 +7,12 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './map/map.component';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {FormsModule} from '@angular/forms';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FatturaElettronicaModule } from 'fattura-elettronica-angular';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -36,17 +38,16 @@ const routes: Routes = [
     MapComponent,
     LoginComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
-    RouterModule.forRoot(routes)
-=======
+    RouterModule.forRoot(routes),
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
->>>>>>> d1a125f83c5dea15ff599599c1efe115835b5613
+    FormsModule,
+    NgbModule.forRoot(),
+    FatturaElettronicaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

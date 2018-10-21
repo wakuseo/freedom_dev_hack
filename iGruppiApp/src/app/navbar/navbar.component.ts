@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +6,9 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor(private authService: AuthService) { }
+  logged = window.localStorage.getItem('AUTH_TOKEN') != null;
+
+  constructor() { }
 
   showForm = false;
 
@@ -15,12 +16,21 @@ export class NavbarComponent implements OnInit {
   }
 
   showLogin() {
-    this.authService.callService('email1@igruppi.com', 'passwd-1');
     console.log('auth-key: ' + window.localStorage.getItem('AUTH_TOKEN'));
     this.toggleLogin();
   }
 
   toggleLogin() {
     this.showForm = !this.showForm;
+  }
+
+  /* hideLoginButton($event?: Event) {
+    this.logged = true;
+  } */
+
+  logout() {
+    this.logged = false;
+    window.localStorage.clear();
+    window.location.href = 'http://localhost:4200/homepage';
   }
 }

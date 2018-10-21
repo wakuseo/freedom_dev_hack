@@ -8,7 +8,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav ml-auto">
       <div class="mx-auto">
-        <button type="button" class="btn btn-outline-success" (click)="showLogin()">Login</button>
+        <button *ngIf="!logged" type="button" class="btn btn-outline-success" (click)="showLogin()">Login</button>
+        <button *ngIf="logged" type="button" class="btn btn-outline-danger" (click)="logout()">Logout</button>
       </div>
     </div>
   </div>
